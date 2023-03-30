@@ -1,6 +1,6 @@
 {
   "name": "@3ddie/react-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Some utils for debug, log and working with strings, objects etc.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -12,13 +12,15 @@
     "dev": "rollup -c -w",
     "build": "rollup -c --bundleConfigAsCjs && npm run build:types",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:types": "tsc -p ./tsconfig.json --outDir dist --declaration true && api-extractor run"
+    "build:types": "tsc -p ./tsconfig.json --outDir dist --declaration true && api-extractor run",
+    "docs": "typedoc src --out docs"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@microsoft/api-extractor": "^7.34.4",
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "typedoc": "^0.23.28"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.1",
